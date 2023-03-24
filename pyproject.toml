@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "taskuptrader"
+version = "0.1.0"
+description = "this is test task for uptrader"
+authors = ["Artem Oleinickov"]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+Django = "^4.1.7"
+
+[tool.poetry.dev-dependencies]
+flake8 = "^6.0.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
