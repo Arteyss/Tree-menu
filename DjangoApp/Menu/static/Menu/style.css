@@ -1,13 +1,44 @@
+body {
+  display: flex;
+  margin: 0;
+}
 .tree-menu {
-  font-size: 20px;
-}
-.tree-menu strong {
-  color: green;
-  font-size: 22px;
-}
-.tree-menu a {
-  text-decoration: none;
+  font-size: 1.2rem;
+  height: 100vh;
+  width: 160px;
+  background-color: #574f4f;
 }
 .tree-menu ul {
-  list-style: none;
+  padding-left: 0;
+}
+.tree-menu li {
+  list-style-type: none;
+  background: #574f4f;
+  position: relative;
+}
+.tree-menu a,
+.tree-menu strong {
+  text-align: center;
+  text-decoration: none;
+  color: #eee;
+  display: block;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.tree-menu a:hover,
+.tree-menu strong:hover {
+  background-color: #6e6262;
+}
+.tree-menu strong {
+  color: #16b816;
+}
+.tree-menu ul ul {
+  display: none;
+  position: absolute;
+  right: -160px;
+  top: 0;
+  width: 160px;
+}
+.tree-menu li:hover > ul {
+  display: block;
 }
