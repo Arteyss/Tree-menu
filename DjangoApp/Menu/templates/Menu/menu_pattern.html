@@ -1,0 +1,24 @@
+<ul>
+  {% for item in menu %}
+    {% if item.parent.id == parent %}
+      {% if item.title in haveChild %}
+      <li>
+        {% if item.url == url_path %}
+          <strong>{{ item.title }} • </strong>
+        {% else %}
+          <a href="{{ item.url }}">{{ item.title }} • </a>
+        {% endif %}
+        {% include 'Menu/menu_pattern.html' with parent=item.id %}
+      </li>
+      {% else %}
+      <li>
+        {% if item.url == url_path %}
+          <strong>{{ item.title }}</strong>
+        {% else %}
+          <a href="{{ item.url }}">{{ item.title }}</a>
+        {% endif %}
+      </li>
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+</ul>
