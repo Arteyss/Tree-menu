@@ -1,12 +1,11 @@
 # Simple tree menu
 
 ## Stack:
----
+
 ![Python](https://img.shields.io/badge/Python-3.11-blue?style=flat&logo=Python)
 ![Django](https://img.shields.io/badge/Django-4.1.7-green?style=flat&logo=Django)
 
 ## Задача:
----
 
 Нужно сделать django app, который будет реализовывать древовидное меню, соблюдая следующие условия:
 1) Меню реализовано через template tag
