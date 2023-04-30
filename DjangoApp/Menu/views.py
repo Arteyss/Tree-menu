@@ -1,5 +1,7 @@
 from django.shortcuts import render
+from django.views import View
 
 
-def view_index(request):
-    return render(request, 'index.html')
+class MenuView(View):
+    def get(self, request, *args, **kwargs):
+        return render(request, 'index.html')

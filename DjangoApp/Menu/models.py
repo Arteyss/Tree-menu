@@ -10,9 +10,15 @@ class CategoryMenu(models.Model):
 
 class MenuBar(models.Model):
     title = models.CharField(max_length=50)
-    url = models.CharField(max_length=100)
-    previus_url = models.ForeignKey('self', null=True, blank=True, on_delete=models.CASCADE)
-    category = models.ForeignKey(CategoryMenu, on_delete=models.CASCADE)
+    url = models.SlugField(unique=True)
+    parent = models.ForeignKey(
+        'self', null=True, blank=True,
+        on_delete=models.CASCADE,
+        )
+    category = models.ForeignKey(
+        CategoryMenu,
+        on_delete=models.CASCADE
+        )
 
     def __str__(self):
         return self.title
