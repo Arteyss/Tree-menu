@@ -1,0 +1,6 @@
+.git
+.gitignore
+.prettierignore
+.flake8
+README.md
+**/*.pyc
