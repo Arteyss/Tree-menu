@@ -22,8 +22,45 @@
 `{% draw_menu 'main_menu' %}`
 
 ---
+## Запуск через ***pip***
+1. Перейти в папку с проектом
+    ```zsh
+    cd Tree-menu
+    ```
+2. Создать виртуальное окружение
+    ```zsh
+    python -m venv menuvenv
+    ```
+3. Активировать созданное виртуальное окружение:
+    - `menuvenv\Scripts\activate.bat` - для Windows;
+    
+    - `source menuvenv/bin/activate` - для Linux и MacOS.
+4. Перейти в папку, где располагается файл ***manage.py***
+    ```zsh
+    cd DjangoApp
+    ```
+5. Запустить локальный сервер *Django*
+    ```zsh
+    python manage.py runserver
+    ```
+
+## Запуск через ***Docker***
+1. Перейти в папку с проектом
+    ```zsh
+    cd Tree-menu
+    ```
+2. Собрать образ на основе *Dockerfile*
+    ```zsh
+    docker build . -t tree-menu
+    ```
+3. Запустить контейнер
+    ```zsh
+    docker run -p -t 8000:8000 tree-menu
+    ```
 
 ### [Вход в админ панель](http://127.0.0.1:8000/admin/)
+>Для примера в проекте есть нужные миграции, суперпользователь и готовая стандартная база данных
+
 ***Логин, пароль***: admin
 
 
