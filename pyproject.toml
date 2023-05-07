@@ -1,11 +1,11 @@
 [tool.poetry]
-name = "taskuptrader"
-version = "0.1.0"
-description = "this is test task for uptrader"
-authors = ["Artem Oleinickov"]
+name = "tree-menu"
+version = "2.0"
+description = "this is simple tree-menu for web app"
+authors = ["Artem Oleynikov"]
 
 [tool.poetry.dependencies]
-python = "^3.11"
+python = "^3.10"
 Django = "^4.1.7"
 
 [tool.poetry.dev-dependencies]
