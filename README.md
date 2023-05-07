@@ -35,11 +35,15 @@
     - `menuvenv\Scripts\activate.bat` - для Windows;
     
     - `source menuvenv/bin/activate` - для Linux и MacOS.
-4. Перейти в папку, где располагается файл ***manage.py***
+4. Установить ***Django***
+    ```zsh
+    pip install django
+    ```
+5. Перейти в папку, где располагается файл ***manage.py***
     ```zsh
     cd DjangoApp
     ```
-5. Запустить локальный сервер *Django*
+6. Запустить локальный сервер *Django*
     ```zsh
     python manage.py runserver
     ```
