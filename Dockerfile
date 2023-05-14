@@ -1,6 +1,10 @@
 FROM python:3.10.11-alpine
 
-RUN pip install poetry
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
+
+RUN pip install --upgrade pip && \
+    pip install poetry
 
 WORKDIR /tree-menu
 
