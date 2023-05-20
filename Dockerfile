@@ -11,7 +11,7 @@ WORKDIR /tree-menu
 COPY . .
 
 RUN poetry config virtualenvs.create false \
-  && poetry install --no-dev
+  && poetry install --only main
 
 WORKDIR /tree-menu/DjangoApp
 
